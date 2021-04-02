@@ -1,0 +1,883 @@
+@charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+.shadow-hover {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: translateZ(0);
+}
+.shadow-hover::after {
+  content: "";
+  box-shadow: 0 0.25rem 0.125rem 0 rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.rotate-360:hover, .rotate-360:focus {
+  transform: rotate(360deg);
+}
+
+.rounded-corner {
+  border-radius: 0.3125rem;
+  background-clip: padding-box;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+
+.rounded-hover-circle:hover {
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+
+.size-xs {
+  width: 1.875rem !important;
+  height: 1.875rem !important;
+  font-size: 0.875rem !important;
+  line-height: 1.75rem !important;
+}
+
+.size-sm {
+  width: 2.3125rem !important;
+  height: 2.3125rem !important;
+  font-size: 1.125rem !important;
+  line-height: 2.125rem !important;
+}
+
+.size-lg {
+  width: 3.75rem !important;
+  height: 3.75rem !important;
+  font-size: 1.75rem !important;
+  line-height: 3.5625rem !important;
+}
+
+.size-xl {
+  width: 4.75rem !important;
+  height: 4.75rem !important;
+  font-size: 2.25rem !important;
+  line-height: 4.25rem !important;
+}
+
+.select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-social {
+  display: inline-block;
+  position: relative;
+  height: 2.9375rem;
+  width: 2.9375rem;
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  background: gray;
+  cursor: pointer;
+  outline: none;
+  margin: 5px;
+  padding: 0;
+  text-decoration: none;
+  border: solid 1px transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.btn-social:hover {
+  text-decoration: none;
+}
+.btn-social span {
+  border-left: solid 1px red;
+}
+.btn-social.fill.btn-facebook-alt {
+  background: #1877f2;
+}
+.btn-social.fill.btn-facebook-alt:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-facebook-alt:hover, .btn-social.fill.btn-facebook-alt:focus {
+  color: #1877f2;
+  background: #fff;
+  border-color: #0d69e1;
+}
+.btn-social.fill.btn-facebook-alt:active, .btn-social.fill.btn-facebook-alt.active {
+  color: #1877f2;
+  background: #fff;
+  border-color: #0d69e1;
+}
+.btn-social.fill.btn-facebook {
+  background: #3b5998;
+}
+.btn-social.fill.btn-facebook:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-facebook:hover, .btn-social.fill.btn-facebook:focus {
+  color: #3b5998;
+  background: #fff;
+  border-color: #334d84;
+}
+.btn-social.fill.btn-facebook:active, .btn-social.fill.btn-facebook.active {
+  color: #3b5998;
+  background: #fff;
+  border-color: #334d84;
+}
+.btn-social.fill.btn-messager {
+  background: #0084ff;
+}
+.btn-social.fill.btn-messager:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-messager:hover, .btn-social.fill.btn-messager:focus {
+  color: #0084ff;
+  background: #fff;
+  border-color: #0075e3;
+}
+.btn-social.fill.btn-messager:active, .btn-social.fill.btn-messager.active {
+  color: #0084ff;
+  background: #fff;
+  border-color: #0075e3;
+}
+.btn-social.fill.btn-twitter {
+  background: #55acee;
+}
+.btn-social.fill.btn-twitter:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-twitter:hover, .btn-social.fill.btn-twitter:focus {
+  color: #55acee;
+  background: #fff;
+  border-color: #3ca0eb;
+}
+.btn-social.fill.btn-twitter:active, .btn-social.fill.btn-twitter.active {
+  color: #55acee;
+  background: #fff;
+  border-color: #3ca0eb;
+}
+.btn-social.fill.btn-google-blue {
+  background: #4285f4;
+}
+.btn-social.fill.btn-google-blue:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-google-blue:hover, .btn-social.fill.btn-google-blue:focus {
+  color: #4285f4;
+  background: #fff;
+  border-color: #2774f2;
+}
+.btn-social.fill.btn-google-blue:active, .btn-social.fill.btn-google-blue.active {
+  color: #4285f4;
+  background: #fff;
+  border-color: #2774f2;
+}
+.btn-social.fill.btn-google-red {
+  background: #ea4335;
+}
+.btn-social.fill.btn-google-red:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-google-red:hover, .btn-social.fill.btn-google-red:focus {
+  color: #ea4335;
+  background: #fff;
+  border-color: #e72b1c;
+}
+.btn-social.fill.btn-google-red:active, .btn-social.fill.btn-google-red.active {
+  color: #ea4335;
+  background: #fff;
+  border-color: #e72b1c;
+}
+.btn-social.fill.btn-google-yellow {
+  background: #fbbc05;
+}
+.btn-social.fill.btn-google-yellow:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-google-yellow:hover, .btn-social.fill.btn-google-yellow:focus {
+  color: #fbbc05;
+  background: #fff;
+  border-color: #e0a804;
+}
+.btn-social.fill.btn-google-yellow:active, .btn-social.fill.btn-google-yellow.active {
+  color: #fbbc05;
+  background: #fff;
+  border-color: #e0a804;
+}
+.btn-social.fill.btn-google-green {
+  background: #34a853;
+}
+.btn-social.fill.btn-google-green:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-google-green:hover, .btn-social.fill.btn-google-green:focus {
+  color: #34a853;
+  background: #fff;
+  border-color: #2d9348;
+}
+.btn-social.fill.btn-google-green:active, .btn-social.fill.btn-google-green.active {
+  color: #34a853;
+  background: #fff;
+  border-color: #2d9348;
+}
+.btn-social.fill.btn-google-plus {
+  background: #dd4b39;
+}
+.btn-social.fill.btn-google-plus:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-google-plus:hover, .btn-social.fill.btn-google-plus:focus {
+  color: #dd4b39;
+  background: #fff;
+  border-color: #d53825;
+}
+.btn-social.fill.btn-google-plus:active, .btn-social.fill.btn-google-plus.active {
+  color: #dd4b39;
+  background: #fff;
+  border-color: #d53825;
+}
+.btn-social.fill.btn-youtube {
+  background: #ff0000;
+}
+.btn-social.fill.btn-youtube:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-youtube:hover, .btn-social.fill.btn-youtube:focus {
+  color: #ff0000;
+  background: #fff;
+  border-color: #e30000;
+}
+.btn-social.fill.btn-youtube:active, .btn-social.fill.btn-youtube.active {
+  color: #ff0000;
+  background: #fff;
+  border-color: #e30000;
+}
+.btn-social.fill.btn-linkedin {
+  background: #0a66c2;
+}
+.btn-social.fill.btn-linkedin:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-linkedin:hover, .btn-social.fill.btn-linkedin:focus {
+  color: #0a66c2;
+  background: #fff;
+  border-color: #0958a7;
+}
+.btn-social.fill.btn-linkedin:active, .btn-social.fill.btn-linkedin.active {
+  color: #0a66c2;
+  background: #fff;
+  border-color: #0958a7;
+}
+.btn-social.fill.btn-pinterest {
+  background: #c61118;
+}
+.btn-social.fill.btn-pinterest:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-pinterest:hover, .btn-social.fill.btn-pinterest:focus {
+  color: #c61118;
+  background: #fff;
+  border-color: #ac0f15;
+}
+.btn-social.fill.btn-pinterest:active, .btn-social.fill.btn-pinterest.active {
+  color: #c61118;
+  background: #fff;
+  border-color: #ac0f15;
+}
+.btn-social.fill.btn-instagram {
+  background: #e4405f;
+}
+.btn-social.fill.btn-instagram:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-instagram:hover, .btn-social.fill.btn-instagram:focus {
+  color: #e4405f;
+  background: #fff;
+  border-color: #e1274a;
+}
+.btn-social.fill.btn-instagram:active, .btn-social.fill.btn-instagram.active {
+  color: #e4405f;
+  background: #fff;
+  border-color: #e1274a;
+}
+.btn-social.fill.btn-instagram-blue {
+  background: #2e5e86;
+}
+.btn-social.fill.btn-instagram-blue:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-instagram-blue:hover, .btn-social.fill.btn-instagram-blue:focus {
+  color: #2e5e86;
+  background: #fff;
+  border-color: #274f71;
+}
+.btn-social.fill.btn-instagram-blue:active, .btn-social.fill.btn-instagram-blue.active {
+  color: #2e5e86;
+  background: #fff;
+  border-color: #274f71;
+}
+.btn-social.fill.btn-instagram-orange {
+  background: #f46f30;
+}
+.btn-social.fill.btn-instagram-orange:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-instagram-orange:hover, .btn-social.fill.btn-instagram-orange:focus {
+  color: #f46f30;
+  background: #fff;
+  border-color: #f35c15;
+}
+.btn-social.fill.btn-instagram-orange:active, .btn-social.fill.btn-instagram-orange.active {
+  color: #f46f30;
+  background: #fff;
+  border-color: #f35c15;
+}
+.btn-social.fill.btn-instagram-yellow {
+  background: #ffdc7d;
+}
+.btn-social.fill.btn-instagram-yellow:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-instagram-yellow:hover, .btn-social.fill.btn-instagram-yellow:focus {
+  color: #ffdc7d;
+  background: #4f4f4f;
+  border-color: #ffd461;
+}
+.btn-social.fill.btn-instagram-yellow:active, .btn-social.fill.btn-instagram-yellow.active {
+  color: #ffdc7d;
+  background: #4f4f4f;
+  border-color: #ffd461;
+}
+.btn-social.fill.btn-instagram-magenta {
+  background: #c32aa3;
+}
+.btn-social.fill.btn-instagram-magenta:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-instagram-magenta:hover, .btn-social.fill.btn-instagram-magenta:focus {
+  color: #c32aa3;
+  background: #fff;
+  border-color: #ac2590;
+}
+.btn-social.fill.btn-instagram-magenta:active, .btn-social.fill.btn-instagram-magenta.active {
+  color: #c32aa3;
+  background: #fff;
+  border-color: #ac2590;
+}
+.btn-social.fill.btn-instagram-purple {
+  background: #7232bd;
+}
+.btn-social.fill.btn-instagram-purple:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-instagram-purple:hover, .btn-social.fill.btn-instagram-purple:focus {
+  color: #7232bd;
+  background: #fff;
+  border-color: #652ca7;
+}
+.btn-social.fill.btn-instagram-purple:active, .btn-social.fill.btn-instagram-purple.active {
+  color: #7232bd;
+  background: #fff;
+  border-color: #652ca7;
+}
+.btn-social.fill.btn-github {
+  background: #333;
+}
+.btn-social.fill.btn-github:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-github:hover, .btn-social.fill.btn-github:focus {
+  color: #333;
+  background: #fff;
+  border-color: #252525;
+}
+.btn-social.fill.btn-github:active, .btn-social.fill.btn-github.active {
+  color: #333;
+  background: #fff;
+  border-color: #252525;
+}
+.btn-social.fill.btn-whatsapp {
+  background: #25d366;
+}
+.btn-social.fill.btn-whatsapp:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-whatsapp:hover, .btn-social.fill.btn-whatsapp:focus {
+  color: #25d366;
+  background: #fff;
+  border-color: #21bb5a;
+}
+.btn-social.fill.btn-whatsapp:active, .btn-social.fill.btn-whatsapp.active {
+  color: #25d366;
+  background: #fff;
+  border-color: #21bb5a;
+}
+.btn-social.fill.btn-whatsapp-teal1 {
+  background: #075e54;
+}
+.btn-social.fill.btn-whatsapp-teal1:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-whatsapp-teal1:hover, .btn-social.fill.btn-whatsapp-teal1:focus {
+  color: #075e54;
+  background: #fff;
+  border-color: #05443d;
+}
+.btn-social.fill.btn-whatsapp-teal1:active, .btn-social.fill.btn-whatsapp-teal1.active {
+  color: #075e54;
+  background: #fff;
+  border-color: #05443d;
+}
+.btn-social.fill.btn-whatsapp-teal2 {
+  background: #128c7e;
+}
+.btn-social.fill.btn-whatsapp-teal2:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-whatsapp-teal2:hover, .btn-social.fill.btn-whatsapp-teal2:focus {
+  color: #128c7e;
+  background: #fff;
+  border-color: #0f7368;
+}
+.btn-social.fill.btn-whatsapp-teal2:active, .btn-social.fill.btn-whatsapp-teal2.active {
+  color: #128c7e;
+  background: #fff;
+  border-color: #0f7368;
+}
+.btn-social.fill.btn-tumblr {
+  background: #35465d;
+}
+.btn-social.fill.btn-tumblr:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-tumblr:hover, .btn-social.fill.btn-tumblr:focus {
+  color: #35465d;
+  background: #fff;
+  border-color: #2b394b;
+}
+.btn-social.fill.btn-tumblr:active, .btn-social.fill.btn-tumblr.active {
+  color: #35465d;
+  background: #fff;
+  border-color: #2b394b;
+}
+.btn-social.fill.btn-telegram {
+  background: #0088cc;
+}
+.btn-social.fill.btn-telegram:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-telegram:hover, .btn-social.fill.btn-telegram:focus {
+  color: #0088cc;
+  background: #fff;
+  border-color: #0075b0;
+}
+.btn-social.fill.btn-telegram:active, .btn-social.fill.btn-telegram.active {
+  color: #0088cc;
+  background: #fff;
+  border-color: #0075b0;
+}
+.btn-social.fill.btn-flickr {
+  background: #f40083;
+}
+.btn-social.fill.btn-flickr:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-flickr:hover, .btn-social.fill.btn-flickr:focus {
+  color: #f40083;
+  background: #fff;
+  border-color: #d80074;
+}
+.btn-social.fill.btn-flickr:active, .btn-social.fill.btn-flickr.active {
+  color: #f40083;
+  background: #fff;
+  border-color: #d80074;
+}
+.btn-social.fill.btn-soundcloud {
+  background: #ff5500;
+}
+.btn-social.fill.btn-soundcloud:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.fill.btn-soundcloud:hover, .btn-social.fill.btn-soundcloud:focus {
+  color: #ff5500;
+  background: #fff;
+  border-color: #e34c00;
+}
+.btn-social.fill.btn-soundcloud:active, .btn-social.fill.btn-soundcloud.active {
+  color: #ff5500;
+  background: #fff;
+  border-color: #e34c00;
+}
+.btn-social.outline.btn-facebook-alt {
+  border-color: #1877f2;
+  background-color: #fff;
+  color: #1877f2;
+}
+.btn-social.outline.btn-facebook-alt:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-facebook-alt:hover, .btn-social.outline.btn-facebook-alt:focus {
+  color: white;
+  background-color: #1877f2;
+}
+.btn-social.outline.btn-facebook {
+  border-color: #3b5998;
+  background-color: #fff;
+  color: #3b5998;
+}
+.btn-social.outline.btn-facebook:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-facebook:hover, .btn-social.outline.btn-facebook:focus {
+  color: white;
+  background-color: #3b5998;
+}
+.btn-social.outline.btn-messager {
+  border-color: #0084ff;
+  background-color: #fff;
+  color: #0084ff;
+}
+.btn-social.outline.btn-messager:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-messager:hover, .btn-social.outline.btn-messager:focus {
+  color: white;
+  background-color: #0084ff;
+}
+.btn-social.outline.btn-twitter {
+  border-color: #55acee;
+  background-color: #fff;
+  color: #55acee;
+}
+.btn-social.outline.btn-twitter:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-twitter:hover, .btn-social.outline.btn-twitter:focus {
+  color: white;
+  background-color: #55acee;
+}
+.btn-social.outline.btn-google-blue {
+  border-color: #4285f4;
+  background-color: #fff;
+  color: #4285f4;
+}
+.btn-social.outline.btn-google-blue:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-google-blue:hover, .btn-social.outline.btn-google-blue:focus {
+  color: white;
+  background-color: #4285f4;
+}
+.btn-social.outline.btn-google-red {
+  border-color: #ea4335;
+  background-color: #fff;
+  color: #ea4335;
+}
+.btn-social.outline.btn-google-red:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-google-red:hover, .btn-social.outline.btn-google-red:focus {
+  color: white;
+  background-color: #ea4335;
+}
+.btn-social.outline.btn-google-yellow {
+  border-color: #fbbc05;
+  background-color: #fff;
+  color: #fbbc05;
+}
+.btn-social.outline.btn-google-yellow:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-google-yellow:hover, .btn-social.outline.btn-google-yellow:focus {
+  color: white;
+  background-color: #fbbc05;
+}
+.btn-social.outline.btn-google-green {
+  border-color: #34a853;
+  background-color: #fff;
+  color: #34a853;
+}
+.btn-social.outline.btn-google-green:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-google-green:hover, .btn-social.outline.btn-google-green:focus {
+  color: white;
+  background-color: #34a853;
+}
+.btn-social.outline.btn-google-plus {
+  border-color: #dd4b39;
+  background-color: #fff;
+  color: #dd4b39;
+}
+.btn-social.outline.btn-google-plus:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-google-plus:hover, .btn-social.outline.btn-google-plus:focus {
+  color: white;
+  background-color: #dd4b39;
+}
+.btn-social.outline.btn-youtube {
+  border-color: #ff0000;
+  background-color: #fff;
+  color: #ff0000;
+}
+.btn-social.outline.btn-youtube:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-youtube:hover, .btn-social.outline.btn-youtube:focus {
+  color: white;
+  background-color: #ff0000;
+}
+.btn-social.outline.btn-linkedin {
+  border-color: #0a66c2;
+  background-color: #fff;
+  color: #0a66c2;
+}
+.btn-social.outline.btn-linkedin:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-linkedin:hover, .btn-social.outline.btn-linkedin:focus {
+  color: white;
+  background-color: #0a66c2;
+}
+.btn-social.outline.btn-pinterest {
+  border-color: #c61118;
+  background-color: #fff;
+  color: #c61118;
+}
+.btn-social.outline.btn-pinterest:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-pinterest:hover, .btn-social.outline.btn-pinterest:focus {
+  color: white;
+  background-color: #c61118;
+}
+.btn-social.outline.btn-instagram {
+  border-color: #e4405f;
+  background-color: #fff;
+  color: #e4405f;
+}
+.btn-social.outline.btn-instagram:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-instagram:hover, .btn-social.outline.btn-instagram:focus {
+  color: white;
+  background-color: #e4405f;
+}
+.btn-social.outline.btn-instagram-blue {
+  border-color: #2e5e86;
+  background-color: #fff;
+  color: #2e5e86;
+}
+.btn-social.outline.btn-instagram-blue:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-instagram-blue:hover, .btn-social.outline.btn-instagram-blue:focus {
+  color: white;
+  background-color: #2e5e86;
+}
+.btn-social.outline.btn-instagram-orange {
+  border-color: #f46f30;
+  background-color: #fff;
+  color: #f46f30;
+}
+.btn-social.outline.btn-instagram-orange:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-instagram-orange:hover, .btn-social.outline.btn-instagram-orange:focus {
+  color: white;
+  background-color: #f46f30;
+}
+.btn-social.outline.btn-instagram-yellow {
+  border-color: #ffdc7d;
+  background-color: #4f4f4f;
+  color: #ffdc7d;
+}
+.btn-social.outline.btn-instagram-yellow:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-instagram-yellow:hover, .btn-social.outline.btn-instagram-yellow:focus {
+  color: white;
+  background-color: #ffdc7d;
+}
+.btn-social.outline.btn-instagram-magenta {
+  border-color: #c32aa3;
+  background-color: #fff;
+  color: #c32aa3;
+}
+.btn-social.outline.btn-instagram-magenta:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-instagram-magenta:hover, .btn-social.outline.btn-instagram-magenta:focus {
+  color: white;
+  background-color: #c32aa3;
+}
+.btn-social.outline.btn-instagram-purple {
+  border-color: #7232bd;
+  background-color: #fff;
+  color: #7232bd;
+}
+.btn-social.outline.btn-instagram-purple:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-instagram-purple:hover, .btn-social.outline.btn-instagram-purple:focus {
+  color: white;
+  background-color: #7232bd;
+}
+.btn-social.outline.btn-github {
+  border-color: #333;
+  background-color: #fff;
+  color: #333;
+}
+.btn-social.outline.btn-github:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-github:hover, .btn-social.outline.btn-github:focus {
+  color: white;
+  background-color: #333;
+}
+.btn-social.outline.btn-whatsapp {
+  border-color: #25d366;
+  background-color: #fff;
+  color: #25d366;
+}
+.btn-social.outline.btn-whatsapp:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-whatsapp:hover, .btn-social.outline.btn-whatsapp:focus {
+  color: white;
+  background-color: #25d366;
+}
+.btn-social.outline.btn-whatsapp-teal1 {
+  border-color: #075e54;
+  background-color: #fff;
+  color: #075e54;
+}
+.btn-social.outline.btn-whatsapp-teal1:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-whatsapp-teal1:hover, .btn-social.outline.btn-whatsapp-teal1:focus {
+  color: white;
+  background-color: #075e54;
+}
+.btn-social.outline.btn-whatsapp-teal2 {
+  border-color: #128c7e;
+  background-color: #fff;
+  color: #128c7e;
+}
+.btn-social.outline.btn-whatsapp-teal2:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-whatsapp-teal2:hover, .btn-social.outline.btn-whatsapp-teal2:focus {
+  color: white;
+  background-color: #128c7e;
+}
+.btn-social.outline.btn-tumblr {
+  border-color: #35465d;
+  background-color: #fff;
+  color: #35465d;
+}
+.btn-social.outline.btn-tumblr:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-tumblr:hover, .btn-social.outline.btn-tumblr:focus {
+  color: white;
+  background-color: #35465d;
+}
+.btn-social.outline.btn-telegram {
+  border-color: #0088cc;
+  background-color: #fff;
+  color: #0088cc;
+}
+.btn-social.outline.btn-telegram:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-telegram:hover, .btn-social.outline.btn-telegram:focus {
+  color: white;
+  background-color: #0088cc;
+}
+.btn-social.outline.btn-flickr {
+  border-color: #f40083;
+  background-color: #fff;
+  color: #f40083;
+}
+.btn-social.outline.btn-flickr:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-flickr:hover, .btn-social.outline.btn-flickr:focus {
+  color: white;
+  background-color: #f40083;
+}
+.btn-social.outline.btn-soundcloud {
+  border-color: #ff5500;
+  background-color: #fff;
+  color: #ff5500;
+}
+.btn-social.outline.btn-soundcloud:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+}
+.btn-social.outline.btn-soundcloud:hover, .btn-social.outline.btn-soundcloud:focus {
+  color: white;
+  background-color: #ff5500;
+}/*# sourceMappingURL=button-socials.css.map */

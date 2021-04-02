@@ -1,0 +1,21 @@
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    // @return $gray-800;
+    @return #4f4f4f;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Helper function to replace negative values with 0
+@function valid-radius($radius) {
+  $return: ();
+  @each $value in $radius {
+    @if type-of($value) == number {
+      $return: append($return, max($value, 0));
+    } @else {
+      $return: append($return, $value);
+    }
+  }
+  @return $return;
+}

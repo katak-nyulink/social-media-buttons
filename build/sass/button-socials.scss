@@ -1,0 +1,53 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+@import "./variables";
+@import "./functions";
+@import "./mixins";
+@import "./utilities";
+
+.btn-social{
+    display: inline-block;
+    position: relative;
+    height: $normal-size;
+    width: $normal-size;
+    font-size: $normal-font-size;
+    line-height: $normal-line-hight;
+    text-align: center;
+    vertical-align: middle;
+    color: set-text-color($black);
+    background: gray;
+    cursor: pointer;
+    outline: none;
+	margin: 5px;
+    padding: 0;
+    text-decoration: none;
+    border:solid 1px transparent;
+    @include user-select;
+    overflow: hidden;
+    @include transition($trasition-cubic-bezier);
+
+    @include hover{
+        text-decoration: none;
+    }
+
+    span{
+        border-left: solid 1px red;
+    }
+
+    &.fill{
+        @each $color, $value in $social-colors {
+            &.btn-#{$color}{
+                @include button-variant(map-get($value,color),map-get($value,content));
+            }
+        }
+    }
+
+    &.outline{
+        @each $color, $value in $social-colors {
+            &.btn-#{$color}{
+                @include button-outline-variant(map-get($value,color),map-get($value,content));
+            }
+        }
+    }
+    
+}

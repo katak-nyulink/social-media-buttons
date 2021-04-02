@@ -1,0 +1,41 @@
+@mixin button-variant($brand-color, $brand-icon, 
+$hover-background: darken($brand-color, 7.5%), 
+$hover-border: darken($brand-color, 5.5%), 
+$active-background: darken($brand-color, 10%), 
+$active-border: darken($brand-color, 5.5%)) 
+{
+  background: $brand-color;
+
+  &:before {
+    font-family: "Font Awesome 5 Brands";
+    content: $brand-icon;
+  }
+  &:hover,
+  &:focus {
+    color: $brand-color;
+    background: set-text-color($brand-color);
+    border-color: $hover-border;
+  }
+  &:active,&.active{
+    color: $brand-color;
+    background: set-text-color($brand-color);
+    border-color: $active-border;
+  }
+}
+@mixin button-outline-variant($brand-color, 
+$brand-icon, $color-hover: set-text-color($brand-color))
+{
+  border-color: $brand-color;
+  background-color: $color-hover;
+  color: $brand-color;
+
+  &:before {
+    font-family: "Font Awesome 5 Brands";
+    content: $brand-icon;
+  }
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: $brand-color;
+  }
+}
